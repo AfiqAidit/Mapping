@@ -62,7 +62,7 @@ class MapUtil {
   };
 
   static initMap() {
-    const urlParams = new URLSearchParams(window.location.searcha);
+    const urlParams = new URLSearchParams(window.location.search);
     const kodNegeri = urlParams.get("KodNegeri");
 
     const targetCoordinates = getZoomCoordinates(kodNegeri);
@@ -73,7 +73,6 @@ class MapUtil {
         zoomLevel = 6;
       }
     }
-    console.log("kodnegeri is", kodNegeri);
 
     const scaleLine = new ol.control.ScaleLine({
       units: "metric",
