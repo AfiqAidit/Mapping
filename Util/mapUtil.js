@@ -73,6 +73,7 @@ class MapUtil {
         zoomLevel = 6;
       }
     }
+    console.log("kodnegeri is", kodNegeri);
 
     const scaleLine = new ol.control.ScaleLine({
       units: "metric",
