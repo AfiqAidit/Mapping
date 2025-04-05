@@ -1,4 +1,5 @@
 const stateCoordinates = {
+    "00": ol.proj.fromLonLat([106.2000, 4.2000]), // Iframe Purposes
     "01": ol.proj.fromLonLat([103.7634, 1.4927]), // Johor
     "02": ol.proj.fromLonLat([100.3689, 5.3557]), // Kedah
     "03": ol.proj.fromLonLat([102.2386, 6.1254]), // Kelantan
