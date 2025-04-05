@@ -62,13 +62,16 @@ class MapUtil {
   };
 
   static initMap() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const kodNegeri = urlParams.get("KodNegeri"); // Get the KodNegeri parameter
+    const urlParams = new URLSearchParams(window.location.searcha);
+    const kodNegeri = urlParams.get("KodNegeri");
 
-    const targetCoordinates = getZoomCoordinates(kodNegeri); // Get coordinates based on KodNegeri
+    const targetCoordinates = getZoomCoordinates(kodNegeri);
     let zoomLevel = 7;
     if (kodNegeri) {
       zoomLevel = 10;
+      if (kodNegeri == "00") {
+        zoomLevel = 6;
+      }
     }
 
     const scaleLine = new ol.control.ScaleLine({
@@ -89,7 +92,7 @@ class MapUtil {
       layers: layers,
       view: new ol.View({
         center: targetCoordinates,
-        zoom: zoomLevel, // Set the desired zoom level
+        zoom: zoomLevel,
       }),
       controls: new ol.Collection([
         new ol.control.Zoom(),
