@@ -1,0 +1,24 @@
+.zoom-extent {
+    top: 1em;
+    left: 2.5em;
+}
+
+.zoom-extent a {
+    background-image: url("../images/zoom.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 80%;
+    -moz-background-size: 80%;
+    -o-background-size: 80%;
+    background-size: 80%;
+    background-color: #FFFFFF;
+    background-size: 80%;
+    display: block;
+    width: 30px;
+    height: 30px
+}
+
+
+.zoom-extent .btn:hover {
+    background-color: #FFFFFF !important; 
+}
